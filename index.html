@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Teachers Directory</title>
+</head>
+<body>
+    <h2>Teachers Directory</h2>
+    <div id="teachersTable"></div>
+
+    <script>
+        function loadXMLDoc(filename) {
+            var xhttp = new XMLHttpRequest();
+            xhttp.open("GET", filename, false);
+            xhttp.send();
+            return xhttp.responseXML;
+        }
+
+        // Load XML and XSL
+        var xml = loadXMLDoc('teachers.xml');
+        var xsl = loadXMLDoc('teachers.xsl');
+
+        // Perform the XSLT transformation
+        if (window.ActiveXObject || "ActiveXObject" in window) { // For Internet Explorer
+            var ex = xml.transformNode(xsl);
+            document.getElementById("teachersTable").innerHTML = ex;
+        } else if (document.implementation && document.implementation.createDocument) { // For other browsers
+            var xsltProcessor = new XSLTProcessor();
+            xsltProcessor.importStylesheet(xsl);
+            var resultDocument = xsltProcessor.transformToFragment(xml, document);
+            document.getElementById("teachersTable").appendChild(resultDocument);
+        }
+    </script>
+</body>
+</html>
