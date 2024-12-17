@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="teachers.xsl"?>
+<Teachers>
+    <Teacher>
+        <Department>Physics</Department>
+        <Name>Ravi Menon</Name>
+        <Position>Associate Professor</Position>
+        <JoinYear>2012</JoinYear>
+        <Salary>85000.00</Salary>
+    </Teacher>
+    <Teacher>
+        <Department>Chemistry</Department>
+        <Name>Anjali Nair</Name>
+        <Position>Lecturer</Position>
+        <JoinYear>2018</JoinYear>
+        <Salary>60000.00</Salary>
+    </Teacher>
+    <Teacher>
+        <Department>Biology</Department>
+        <Name>Deepak Pillai</Name>
+        <Position>Senior Lecturer</Position>
+        <JoinYear>2010</JoinYear>
+        <Salary>70000.00</Salary>
+    </Teacher>
+</Teachers>
