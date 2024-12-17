@@ -19,15 +19,20 @@
         var xml = loadXMLDoc('teachers.xml');
         var xsl = loadXMLDoc('teachers.xsl');
 
-        // Perform the XSLT transformation
-        if (window.ActiveXObject || "ActiveXObject" in window) { // For Internet Explorer
-            var ex = xml.transformNode(xsl);
-            document.getElementById("teachersTable").innerHTML = ex;
-        } else if (document.implementation && document.implementation.createDocument) { // For other browsers
-            var xsltProcessor = new XSLTProcessor();
-            xsltProcessor.importStylesheet(xsl);
-            var resultDocument = xsltProcessor.transformToFragment(xml, document);
-            document.getElementById("teachersTable").appendChild(resultDocument);
+        // Ensure the response is parsed as XML
+        if (!xml || !xsl) {
+            console.error('Failed to load XML or XSL file.');
+        } else {
+            // Perform the XSLT transformation
+            if (window.ActiveXObject || "ActiveXObject" in window) { // For Internet Explorer
+                var ex = xml.transformNode(xsl);
+                document.getElementById("teachersTable").innerHTML = ex;
+            } else if (document.implementation && document.implementation.createDocument) { // For other browsers
+                var xsltProcessor = new XSLTProcessor();
+                xsltProcessor.importStylesheet(xsl);
+                var resultDocument = xsltProcessor.transformToFragment(xml, document);
+                document.getElementById("teachersTable").appendChild(resultDocument);
+            }
         }
     </script>
 </body>
