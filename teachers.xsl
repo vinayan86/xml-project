@@ -17,9 +17,9 @@
                     </tr>
                     <xsl:for-each select="Teachers/Teacher">
                         <tr>
-                            <td><xsl:value-of select="Department"/></td>
                             <td><xsl:value-of select="Name"/></td>
                             <td><xsl:value-of select="Position"/></td>
+                            <td><xsl:value-of select="Department"/></td>
                             <td><xsl:value-of select="JoinYear"/></td>
                             <td><xsl:value-of select="Salary"/></td>
                         </tr>
