@@ -9,9 +9,9 @@
                 <h2>Teachers Directory</h2>
                 <table border="1">
                     <tr bgcolor="#9acd32">
-                        <th>Department</th>
                         <th>Name</th>
                         <th>Position</th>
+                         <th>Department</th>
                         <th>Join Year</th>
                         <th>Salary</th>
                     </tr>
