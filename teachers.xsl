@@ -11,7 +11,7 @@
                     <tr bgcolor="#9acd32">
                         <th>Name</th>
                         <th>Position</th>
-                         <th>Department</th>
+                        <th>Department</th>
                         <th>Join Year</th>
                         <th>Salary</th>
                     </tr>
