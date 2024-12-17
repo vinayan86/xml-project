@@ -9,17 +9,17 @@
                 <h2>Teachers Directory</h2>
                 <table border="1">
                     <tr bgcolor="#9acd32">
-                        <th>Department</th>
                         <th>Name</th>
                         <th>Position</th>
+                        <th>Department</th>
                         <th>Join Year</th>
                         <th>Salary</th>
                     </tr>
                     <xsl:for-each select="Teachers/Teacher">
                         <tr>
-                            <td><xsl:value-of select="Department"/></td>
                             <td><xsl:value-of select="Name"/></td>
                             <td><xsl:value-of select="Position"/></td>
+                            <td><xsl:value-of select="Department"/></td>
                             <td><xsl:value-of select="JoinYear"/></td>
                             <td><xsl:value-of select="Salary"/></td>
                         </tr>
